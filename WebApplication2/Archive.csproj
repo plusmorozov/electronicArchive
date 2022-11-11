@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{56B1BDBA-F7A1-4BB1-9687-4E978B60A01B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication2</RootNamespace>
+    <AssemblyName>WebApplication2</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin.aspx" />
+    <Content Include="Ascx\Content.ascx" />
+    <Content Include="Ascx\AdminMenu.ascx" />
+    <Content Include="Ascx\AdminContent.ascx" />
+    <Content Include="Ascx\Futter.ascx" />
+    <Content Include="ContPrevVersion.aspx" />
+    <Content Include="AdminDocView.aspx" />
+    <Content Include="AdminContPrevVersion.aspx" />
+    <Content Include="Journal.aspx" />
+    <Content Include="Request.aspx" />
+    <Content Include="SprArchive.aspx" />
+    <Content Include="SprCompany.aspx" />
+    <Content Include="SprDepartment.aspx" />
+    <Content Include="SprDocType.aspx" />
+    <Content Include="SprObject.aspx" />
+    <Content Include="SprObjectType.aspx" />
+    <Content Include="SprStatus.aspx" />
+    <Content Include="SprStorageBuilding.aspx" />
+    <Content Include="SprStorageCabinet.aspx" />
+    <Content Include="TestUser.aspx" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\Style.css" />
+    <Content Include="css\Style_Futter.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="Users.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Main.aspx" />
+    <Content Include="DocCreate.aspx" />
+    <Content Include="ContCreate.aspx" />
+    <Content Include="Ascx\MainMenu.ascx" />
+    <Content Include="DocView.aspx" />
+    <Content Include="DocEdit.aspx" />
+    <Content Include="ContEdit.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ascx\Content.ascx.cs">
+      <DependentUpon>Content.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ascx\Content.ascx.designer.cs">
+      <DependentUpon>Content.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Ascx\AdminMenu.ascx.cs">
+      <DependentUpon>AdminMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ascx\AdminMenu.ascx.designer.cs">
+      <DependentUpon>AdminMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Ascx\AdminContent.ascx.cs">
+      <DependentUpon>AdminContent.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ascx\AdminContent.ascx.designer.cs">
+      <DependentUpon>AdminContent.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Ascx\Futter.ascx.cs">
+      <DependentUpon>Futter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ascx\Futter.ascx.designer.cs">
+      <DependentUpon>Futter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ContPrevVersion.aspx.cs">
+      <DependentUpon>ContPrevVersion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContPrevVersion.aspx.designer.cs">
+      <DependentUpon>ContPrevVersion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDocView.aspx.cs">
+      <DependentUpon>AdminDocView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDocView.aspx.designer.cs">
+      <DependentUpon>AdminDocView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminContPrevVersion.aspx.cs">
+      <DependentUpon>AdminContPrevVersion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminContPrevVersion.aspx.designer.cs">
+      <DependentUpon>AdminContPrevVersion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Journal.aspx.cs">
+      <DependentUpon>Journal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Journal.aspx.designer.cs">
+      <DependentUpon>Journal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\FuncProcDate.cs" />
+    <Compile Include="Request.aspx.cs">
+      <DependentUpon>Request.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Request.aspx.designer.cs">
+      <DependentUpon>Request.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SprArchive.aspx.cs">
+      <DependentUpon>SprArchive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprArchive.aspx.designer.cs">
+      <DependentUpon>SprArchive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SprCompany.aspx.cs">
+      <DependentUpon>SprCompany.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprCompany.aspx.designer.cs">
+      <DependentUpon>SprCompany.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SprDepartment.aspx.cs">
+      <DependentUpon>SprDepartment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprDepartment.aspx.designer.cs">
+      <DependentUpon>SprDepartment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SprDocType.aspx.cs">
+      <DependentUpon>SprDocType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprDocType.aspx.designer.cs">
+      <DependentUpon>SprDocType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SprObject.aspx.cs">
+      <DependentUpon>SprObject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprObject.aspx.designer.cs">
+      <DependentUpon>SprObject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SprObjectType.aspx.cs">
+      <DependentUpon>SprObjectType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprObjectType.aspx.designer.cs">
+      <DependentUpon>SprObjectType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SprStatus.aspx.cs">
+      <DependentUpon>SprStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprStatus.aspx.designer.cs">
+      <DependentUpon>SprStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SprStorageBuilding.aspx.cs">
+      <DependentUpon>SprStorageBuilding.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprStorageBuilding.aspx.designer.cs">
+      <DependentUpon>SprStorageBuilding.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SprStorageCabinet.aspx.cs">
+      <DependentUpon>SprStorageCabinet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SprStorageCabinet.aspx.designer.cs">
+      <DependentUpon>SprStorageCabinet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestUser.aspx.cs">
+      <DependentUpon>TestUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestUser.aspx.designer.cs">
+      <DependentUpon>TestUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FuncProc.cs" />
+    <Compile Include="Const_Content.cs" />
+    <Compile Include="Const_Docs.cs" />
+    <Compile Include="Const_Common.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DocCreate.aspx.cs">
+      <DependentUpon>DocCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DocCreate.aspx.designer.cs">
+      <DependentUpon>DocCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContCreate.aspx.cs">
+      <DependentUpon>ContCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContCreate.aspx.designer.cs">
+      <DependentUpon>ContCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ascx\MainMenu.ascx.cs">
+      <DependentUpon>MainMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ascx\MainMenu.ascx.designer.cs">
+      <DependentUpon>MainMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DocView.aspx.cs">
+      <DependentUpon>DocView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DocView.aspx.designer.cs">
+      <DependentUpon>DocView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DocEdit.aspx.cs">
+      <DependentUpon>DocEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DocEdit.aspx.designer.cs">
+      <DependentUpon>DocEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContEdit.aspx.cs">
+      <DependentUpon>ContEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContEdit.aspx.designer.cs">
+      <DependentUpon>ContEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserData.cs" />
+    <Compile Include="Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fonts\fontawesome-webfont.eot" />
+    <None Include="fonts\fontawesome-webfont.ttf" />
+    <None Include="fonts\fontawesome-webfont.woff" />
+    <None Include="fonts\fontawesome-webfont.woff2" />
+    <None Include="fonts\FontAwesome.otf" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>7015</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

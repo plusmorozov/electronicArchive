@@ -1,0 +1,39 @@
+﻿body,textarea, option, select, input
+{
+    font-family : Arial, Helvetica, Sans-Serif; 
+    font-size: medium;    
+}
+
+.divClear 
+{
+    clear: both;
+    height: 1px;    
+}
+
+.blockDebug                     
+{
+    padding: 15px;
+    background-color: White;
+}
+
+.blockFutter
+{
+    padding: 5px;
+    background-color: #909090;    
+    font-size: small;
+    font-weight: bold;
+    color: #FFFFFF;
+
+}
+
+.elmFutter_Left
+{
+    float: left;
+    margin-right:15px;
+}
+
+.elmFutter_Right
+{
+    float: right;
+    margin-left:15px;
+}
