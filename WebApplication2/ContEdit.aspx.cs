@@ -83,6 +83,13 @@ namespace WebApplication2
 
         }
 
+        protected void Page_Unload(object sender, EventArgs e)
+        {
+            // Закрытие соединения с базой данных
+            if (qryCnn != null) qryCnn.Close();
+
+        }
+
         protected void DB_Read_Data(int ID_Cont)
         {
             string errDB = "";

@@ -62,6 +62,13 @@ namespace WebApplication2
 
         }
 
+        protected void Page_Unload(object sender, EventArgs e)
+        {
+            // Закрытие соединения с базой данных
+            if (qryCnn != null) qryCnn.Close();
+
+        }
+
         protected string Get_Table_SelectCommand()
         {
             const string sqlTable = "SELECT O.ID, O.ID_Object_Type as ID_OT, O.strName, IFNULL(O.strInvNum, '') as strInvNum, OT.strNameShort as strNameShort " +

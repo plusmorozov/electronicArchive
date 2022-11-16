@@ -68,6 +68,12 @@ namespace WebApplication2
 
                 FutterSettings();
             }
+        }
+
+        protected void Page_Unload(object sender, EventArgs e)
+        {
+            // Закрытие соединения с базой данных
+            if (qryCnn != null) qryCnn.Close();
 
         }
 

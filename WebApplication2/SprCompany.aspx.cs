@@ -59,13 +59,13 @@ namespace WebApplication2
             Futter.Debug1 = CFP.Get_Session_Params() + "<br />Роль=" + UserData.strRole;            // Вывод отладочной информации
         }
 
-        // Освобождение ресурсов
         protected void Page_Unload(object sender, EventArgs e)
         {
             // Закрытие соединения с базой данных
             if (qryCnn != null) qryCnn.Close();
-        }
 
+        }
+        
         // Проверка на корректность введенных данных - Организации
         protected bool dbgTable_Check_Input_Data(int ID, DropDownList ddlCompanyType, TextBox edtName, TextBox edtNameShort, TextBox edtNameFull, TextBox edtAddress)
         {

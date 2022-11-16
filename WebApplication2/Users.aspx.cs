@@ -69,6 +69,13 @@ namespace WebApplication2
             Futter.Debug1 = CFP.Get_Session_Params() + "<br />Роль=" + UserData.strRole;            // Вывод отладочной информации
         }
 
+        protected void Page_Unload(object sender, EventArgs e)
+        {
+            // Закрытие соединения с базой данных
+            if (qryCnn != null) qryCnn.Close();
+
+        }
+
         // ---- Чтение и установка данных справочников формы -------------------------------------------------------------------------------------------------------
         protected void Fill_Data_Spravochnik(MySqlCommand qrySQL)
         {

@@ -63,6 +63,15 @@ namespace WebApplication2
 
         }
 
+        // Освобождение ресурсов
+        
+        protected void Page_Unload(object sender, EventArgs e)
+        {
+            // Закрытие соединения с базой данных
+            if (qryCnn != null) qryCnn.Close();
+
+        }
+        
         // ---- Чтение и обработка входных параметров
         protected void GetParams()
         {

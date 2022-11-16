@@ -93,16 +93,19 @@ namespace WebApplication2
                     AdminContent.ColumnVisible = 759;
                 }
 
-
-
-
-
                 // Передача прав пользователя в Content.ascx
                 AdminContent.UR = UserData.Rights;
 
                 FutterSettings();
             }
             Futter.Debug1 = CFP.Get_Session_Params() + "<br />Роль=" + UserData.strRole;            // Вывод отладочной информации
+
+        }
+
+        protected void Page_Unload(object sender, EventArgs e)
+        {
+            // Закрытие соединения с базой данных
+            if (qryCnn != null) qryCnn.Close();
 
         }
 
@@ -374,8 +377,6 @@ namespace WebApplication2
                 }
             }
         }
-
-       
 
         protected void BtnContDelClick(object sender, CommandEventArgs e)
         {

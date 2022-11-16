@@ -49,6 +49,13 @@ namespace WebApplication2
 
         }
 
+        protected void Page_Unload(object sender, EventArgs e)
+        {
+            // Закрытие соединения с базой данных
+            if (qryCnn != null) qryCnn.Close();
+
+        }
+
         protected void btnSetTestUID_Click(object sender, EventArgs e)
         {
             Session["FhSsrb5684bhsfgBabtnaVsdv"] = edtTestUID.Text;
